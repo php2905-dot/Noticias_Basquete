@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo do Basquete - Portal de Notícias e Produtos</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo">🏀</div>
+                <div class="logo-text">
+                    <h1>SaivNoticias</h1>
+                    <p>Mundo do Basquete</p>
+                </div>
+            </div>
+            <nav class="nav-desktop">
+                <span class="nav-link user-info" id="userDisplay" style="display:none;"></span>
+                <a href="#inicio" class="nav-link">Início</a>
+                <a href="#jogadores" class="nav-link">Jogadores</a>
+                <a href="#produtos" class="nav-link">Produtos</a>
+                <a href="Cadastro.html" class="nav-link btn-white" id="btnCadastro">Cadastrar</a>
+                <a href="#" class="nav-link btn-white" id="btnLogout" style="display:none;">Sair</a>
+            </nav>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <nav class="nav-mobile" id="navMobile">
+            <a href="#inicio" class="nav-link">Início</a>
+            <a href="#jogadores" class="nav-link">Jogadores</a>
+            <a href="#produtos" class="nav-link">Produtos</a>
+            <a href="Cadastro.html" class="nav-link" id="btnCadastroMobile">Cadastrar</a>
+            <a href="#" class="nav-link" id="btnLogoutMobile" style="display:none;">Sair</a>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-overlay"></div>
+        <img src="imagens/basquete.jpg" alt="Basquete" class="hero-image">
+        <div class="hero-content">
+            <h2>Bem-vindo ao Mundo do Basquete</h2>
+            <p>Fique por dentro das maiores atualizações do basquete mundial</p>
+        </div>
+    </section>
+
+    <section class="marquee-section">
+        <div class="marquee-wrapper">
+            <div class="marquee-content">
+                <span class="marquee-text">
+                    <h3>Fique por dentro e visualize novas atualizações sobre o mundo do Basquete. APROVEITE!!!</h3>
+                </span>
+                <span class="marquee-text">
+                    <h3>Fique por dentro e visualize novas atualizações sobre o mundo do Basquete. APROVEITE!!!</h3>
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <section id="jogadores" class="videos-section">
+            <h2>Vídeos em Destaque</h2>
+            <div class="videos-container">
+                <div class="video-item">
+                    <h3>Os melhores momentos da NBA 2024/2025</h3>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/wGW_brMHK-o" 
+                        title="NBA Highlights 2024/2025" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                </div>
+                <div class="video-item">
+                    <h3>Todas as regras básicas do Basquete</h3>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/DRMBX4sA-3Q" 
+                        title="Regras do Basquete" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tabs-section section-light">
+            <div class="tabs-menu">
+                <button class="tab-btn active" onclick="switchTab('players', event)">Jogadores em Destaque</button>
+                <button class="tab-btn" onclick="switchTab('clubs', event)">Clubes da NBA</button>
+            </div>
+
+            <div id="players" class="tab-content active">
+                <div class="cards-grid">
+                    <div class="card">
+                        <img src="imagens/Curry.jpg" alt="Wardell Stephen Curry II">
+                        <div class="card-content">
+                            <span class="card-badge">Armador</span>
+                            <h3>Wardell Stephen Curry II</h3>
+                            <p class="card-team">Golden State Warriors</p>
+                            <div class="card-info">
+                                <p><strong>Nascimento:</strong> 14 de março de 1988, Akron, Ohio</p>
+                                <p><strong>Estreia NBA:</strong> 28 de outubro de 2009</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="imagens/Nikola.jpg" alt="Nikola Jokic">
+                        <div class="card-content">
+                            <span class="card-badge">Pivô</span>
+                            <h3>Nikola Jokic</h3>
+                            <p class="card-team">Denver Nuggets</p>
+                            <div class="card-info">
+                                <p><strong>Nascimento:</strong> 19 de fevereiro de 1995, Sombor</p>
+                                <p><strong>Estreia NBA:</strong> 28 de outubro de 2015</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="imagens/Lebron.jpg" alt="LeBron James">
+                        <div class="card-content">
+                            <span class="card-badge">Ala</span>
+                            <h3>LeBron James</h3>
+                            <p class="card-team">Los Angeles Lakers</p>
+                            <div class="card-info">
+                                <p><strong>Nascimento:</strong> 30 de dezembro de 1984, Akron, Ohio</p>
+                                <p><strong>Estreia NBA:</strong> 29 de outubro de 2003</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="imagens/Giannis.jpg" alt="Giannis Antetokounmpo">
+                        <div class="card-content">
+                            <span class="card-badge">Ala</span>
+                            <h3>Giannis Antetokounmpo</h3>
+                            <p class="card-team">Milwaukee Bucks</p>
+                            <div class="card-info">
+                                <p><strong>Nascimento:</strong> 6 de dezembro de 1994, Grécia</p>
+                                <p><strong>Estreia NBA:</strong> 13 de outubro de 2013</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="imagens/Shai.jpg" alt="Shai Gilgeous-Alexander">
+                        <div class="card-content">
+                            <span class="card-badge">Armador</span>
+                            <h3>Shai Gilgeous-Alexander</h3>
+                            <p class="card-team">Oklahoma City Thunder</p>
+                            <div class="card-info">
+                                <p><strong>Nascimento:</strong> 12 de julho de 1998, Toronto</p>
+                                <p><strong>Estreia NBA:</strong> 21 de junho de 2018</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="clubs" class="tab-content">
+                <div class="cards-grid">
+                    <div class="card">
+                        <img src="imagens/Golden_State_Warriors.png" alt="Golden State Warriors">
+                        <div class="card-content">
+                            <h3>Golden State Warriors</h3>
+                            <p class="card-team">Fundado em 1946</p>
+                            <p>O clube Golden State Warriors foi criado em 1946. A franquia foi fundada na Filadélfia, onde era conhecida como Philadelphia Warriors.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="imagens/dever.jpg" alt="Denver Nuggets">
+                        <div class="card-content">
+                            <h3>Denver Nuggets</h3>
+                            <p class="card-team">Fundado em 1974</p>
+                            <p>O clube foi criado em 1974. Inicialmente chamado Denver Rockets, foi um dos membros originais da ABA.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="imagens/Lakers.jpg" alt="Los Angeles Lakers">
+                        <div class="card-content">
+                            <h3>Los Angeles Lakers</h3>
+                            <p class="card-team">Fundado em 1946</p>
+                            <p>O clube iniciou em 1946 como Detroit Gems e em 1960 foi realocado para Los Angeles.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="imagens/Milwaukee.jpg" alt="Milwaukee Bucks">
+                        <div class="card-content">
+                            <h3>Milwaukee Bucks</h3>
+                            <p class="card-team">Fundado em 1968</p>
+                            <p>Criado em 22 de janeiro de 1968, os Bucks ganharam dois títulos da liga (1971, 2021).</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="imagens/Oklahoma.jpg" alt="Oklahoma City Thunder">
+                        <div class="card-content">
+                            <h3>Oklahoma City Thunder</h3>
+                            <p class="card-team">Fundado em 1967</p>
+                            <p>Criado originalmente como Seattle SuperSonics em 1967. Em 2006, foi comprado e renomeado para Oklahoma City Thunder.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="produtos" class="products-section section-light">
+            <h2>Produtos em Destaque</h2>
+            <div class="carousel-container">
+                <button class="carousel-btn prev" onclick="scrollCarousel(-300)">❮</button>
+                <div class="carousel" id="carousel">
+                    <div class="product-card">
+                        <img src="imagenstenes/Jordan1.jpg" alt="Air Jordan 1">
+                        <h3>Air Jordan 1</h3>
+                        <p class="product-price">R$ 300,00</p>
+                        <p class="product-description">Tênis clássico com design icônico e conforto premium</p>
+                    </div>
+                    <div class="product-card">
+                        <img src="imagenstenes/Jordan2.jpg" alt="Air Jordan 2">
+                        <h3>Air Jordan 2</h3>
+                        <p class="product-price">R$ 320,00</p>
+                        <p class="product-description">Edição especial com tecnologia de amortecimento avançada</p>
+                    </div>
+                    <div class="product-card">
+                        <img src="imagenstenes/Jordan3.jpg" alt="Air Jordan 3">
+                        <h3>Air Jordan 3</h3>
+                        <p class="product-price">R$ 350,00</p>
+                        <p class="product-description">Design retro com acabamento de qualidade superior</p>
+                    </div>
+                    <div class="product-card">
+                        <img src="imagenstenes/Jordan4.jpg" alt="Air Jordan 4">
+                        <h3>Air Jordan 4</h3>
+                        <p class="product-price">R$ 370,00</p>
+                        <p class="product-description">Modelo exclusivo com detalhes em cores vibrantes</p>
+                    </div>
+                    <div class="product-card">
+                        <img src="imagenstenes/Jordan5.jpg" alt="Air Jordan 5">
+                        <h3>Air Jordan 5</h3>
+                        <p class="product-price">R$ 390,00</p>
+                        <p class="product-description">Inspirado em design futurista e inovador</p>
+                    </div>
+                    <div class="product-card">
+                        <img src="imagenstenes/Jordan6.jpg" alt="Air Jordan 6">
+                        <h3>Air Jordan 6</h3>
+                        <p class="product-price">R$ 400,00</p>
+                        <p class="product-description">Versão premium com materiais de alta qualidade</p>
+                    </div>
+                    <div class="product-card">
+                        <img src="imagenstenes/jordan7.jpg" alt="Air Jordan 7">
+                        <h3>Air Jordan 7</h3>
+                        <p class="product-price">R$ 420,00</p>
+                        <p class="product-description">Edição limitada com design exclusivo e elegante</p>
+                    </div>
+                </div>
+                <button class="carousel-btn next" onclick="scrollCarousel(300)">❯</button>
+            </div>
+        </section>
+
+        <section class="download-section">
+            <div class="download-container">
+                <div class="download-content">
+                    <h2>Regras Oficiais do Basquete</h2>
+                    <p>Baixe o documento completo com todas as regras oficiais da CBB (Confederação Brasileira de Basquete)</p>
+                    <button class="btn-download-modern" onclick="downloadPDF()">
+                        <span class="download-icon">⬇️</span>
+                        <span class="download-text">Download PDF</span>
+                    </button>
+                </div>
+                <div class="download-image">
+                    <div class="download-icon-large">📋</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Sobre Nós</h3>
+                <p>Mundo do Basquete é seu portal completo para notícias, análises e conteúdo sobre o basquete profissional mundial.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="#">Jogadores</a></li>
+                    <li><a href="#">Clubes</a></li>
+                    <li><a href="#">Vídeos</a></li>
+                    <li><a href="#">Produtos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>📧 php2255@gmail.com</p>
+                <p>📱 (11) 1193074-3324</p>
+                <p>📍 São Paulo, Brasil</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Mundo do Basquete. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <button class="btn-whatsapp" id="whatsappBtn">💬</button>
+
+    <div class="whatsapp-chat" id="whatsappChat">
+        <div class="chat-header">
+            <h3>Entre em contato</h3>
+            <button onclick="toggleWhatsApp()">✕</button>
+        </div>
+        <div class="chat-body">
+            <p>Tire suas dúvidas conosco via WhatsApp</p>
+            <button onclick="openWhatsApp()">Abrir WhatsApp</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
